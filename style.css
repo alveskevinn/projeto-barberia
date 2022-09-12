@@ -3,8 +3,6 @@
     */
 @import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
 
-
-      
 .cor-fundo-header{
     background-color: #0c0c0c;
 }
@@ -30,7 +28,7 @@ body{
     font-size: 1.5em;
 }
 .texto-carrosel{
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-align: center;
 }
 .localizacao{
@@ -101,5 +99,15 @@ body{
         .texto-carrosel{
             font-size: 1em;
             text-align: center;
+        }
+        .texto-carrosel{
+            font-size: 0.9em;
+            text-align: center;
+        }
+        .localizacao{
+            background-color: #fffffffa;
+            height: 430px;
+            width: 100%;
+            padding: 10px 0;
         }
     }
