@@ -1,0 +1,105 @@
+/* Laranja - #F18836 
+   Cinza - #28292B
+    */
+@import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
+
+
+      
+.cor-fundo-header{
+    background-color: #0c0c0c;
+}
+.cor-letra-laranja{
+    color: #F18836;
+}
+.cor-letra-branca{
+    color: rgb(224, 224, 224);
+}
+body{
+    background-color: #0c0c0c;
+    min-width: 380px;
+}
+.altura-carrosel{
+    height: 500px;
+}
+.imagem-carrosel{
+    height: 390px;
+    object-fit: cover;
+    object-position: center;
+}
+.titulo-carrosel{
+    font-size: 1.5em;
+}
+.texto-carrosel{
+    font-size: 1.2em;
+    text-align: center;
+}
+.localizacao{
+    background-color: #fffffffa;
+    height: 430px;
+    width: 100%;
+    padding: 25px 0;
+}
+.imagem-inicio{
+    height: 530px;
+    background-image: url(Fotos/pexels-nikolaos-dimou-1319459\ -\ Editado.png);
+    background-size: cover;
+}
+.nome-header{   
+    font-family: 'Smooch', cursive;
+    color: white;
+    font-size: 5em;
+    margin-top: -70px;
+}
+.transparencia-botao{
+    background: #f18736c1;
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.mapas-alignment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+[data-anime]{
+    opacity: 0;
+    transition: .3s;
+}
+[data-anime="left"]{
+    transform: translate3d(-50px, 0, 0);
+}
+[data-anime="right"]{
+    transform: translate3d(-50px, 0, 0);
+}
+[data-anime].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+.imagem-socialmedia{
+    height: 30px;
+    margin: 20px 0;
+}
+.mobile{
+    display: none;
+}
+
+@media (max-width: 767px)
+    {
+        .imagem-carrosel{
+            height: 350px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .mobile{
+            display: block;
+        }
+        .desktop{
+            display: none;
+        }
+        .texto-carrosel{
+            font-size: 1em;
+            text-align: center;
+        }
+    }
