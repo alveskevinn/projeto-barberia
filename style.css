@@ -6,6 +6,10 @@
 .cor-fundo-header{
     background-color: #0c0c0c;
 }
+.cor-letra-preta{
+    color:#0c0c0c
+
+}
 .cor-letra-laranja{
     color: #F18836;
 }
@@ -82,6 +86,46 @@ body{
 .mobile{
     display: none;
 }
+.service-icon1 {
+    width: 130px;
+    height: 130px;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+}
+.foto-icon {
+    width: 380px;
+    height: 390px;
+    background-position: cover;
+}
+.position-relative {
+    position: relative;
+  }
+  
+  .blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .col-md-4:hover .blur-overlay {
+    opacity: 1;
+  }
+  
+
 
 @media (max-width: 767px)
     {
@@ -110,4 +154,24 @@ body{
             width: 100%;
             padding: 10px 0;
         }
+    }
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #343a40;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #555;
+        border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #333;
+    }
+    .bg-white{
+        padding: 36px;
+        background-color: white;
     }

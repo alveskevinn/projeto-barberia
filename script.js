@@ -8,7 +8,6 @@ function animeScroll(){
             elemento.classList.add(animationClass);
         }
 
-        console.log(elemento.offsetTop);
     })
 };
 
