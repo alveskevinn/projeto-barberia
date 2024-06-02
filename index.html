@@ -1,173 +1,227 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Barbearia TwoBrothers</title>
+    <title>Barbearia Barba Forte</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Fotos/barbaforte-log-removebg-preview.ico" type="image/x-icon">
     <meta name="google-site-verification" content="EIQ-tOHYuX5doYIGLREXkckMEH7vvDoBGs3metemofM" />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg">
-        <header class="container-fluid d-flex">
-                <nav class="navbar">
-                    <div class="container-fluid cor-fundo-header">
-                      <img src="Fotos/barbaforte-log-removebg-preview.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top" style="margin-right: 10px;">
-                    </div>
-                </nav>
+    <style>
+        body {
+            background-color: #0c0c0c;
+            min-width: 380px;
+        }
+        .cor-fundo-header {
+            background-color: #0c0c0c;
+        }
+        .cor-letra-laranja {
+            color: #F18836;
+        }
+        .cor-letra-branca {
+            color: rgb(224, 224, 224);
+        }
+        .imagem-inicio {
+            height: 530px;
+            background-image: url(Fotos/pexels-nikolaos-dimou-1319459\ -\ Editado.png);
+            background-size: cover;
+        }
+        .transparencia-botao {
+            background: #f18736c1;
+            backdrop-filter: blur(10px);
+            color: white;
+        }
+        .blur-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .position-relative:hover .blur-overlay {
+            opacity: 1;
+        }
+        .mobile {
+            display: none;
+        }
+        .desktop {
+            display: block;
+        }
+        @media (max-width: 767px) {
+            .imagem-carrosel {
+                height: 350px;
+            }
+            .mobile {
+                display: block;
+            }
+            .desktop {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg cor-fundo-header">
+        <header class="container-fluid d-flex justify-content-center">
+            <img src="Fotos/barbaforte-log-removebg-preview.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top" style="margin-right: 10px;">
         </header>
-      </nav>
-      <div class="imagem-inicio">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-          <img src="Fotos/barbaforte-log-removebg-preview.png" alt="" style="width: 650px;" class="img-fluid">
-          <button type="button" class="btn btn-lg transparencia-botao mt-4 ml-4"><a href="https://api.whatsapp.com/send?phone=5519998341189&text=Ol%C3%A1%2C%20eu%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" style="color: white; text-decoration: none;">Reservar um horário</a></button>
-        </div>  
-      </div>
-      <div class="container h-3 text-center">
+    </nav>
+    <div class="imagem-inicio d-flex flex-column justify-content-center align-items-center">
+        <img src="Fotos/barbaforte-log-removebg-preview.png" alt="" style="width: 100%; max-width: 650px;" class="img-fluid">
+        <button type="button" class="btn btn-lg mt-4 transparencia-botao">
+            <a href="https://api.whatsapp.com/send?phone=5519998341189&text=Ol%C3%A1%2C%20eu%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" style="color: white; text-decoration: none;">Reservar um horário</a>
+        </button>
+    </div>
+    <div class="container h-3 text-center my-5">
         <div class="row">
-          <div class="col py-3" data-anime="right">
-              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="Fotos/Foto1.png" class="d-block w-100 imagem-carrosel" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="Fotos/foto2.png" class="d-block w-100 imagem-carrosel" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="Fotos/foto3.png" class="d-block w-100 imagem-carrosel " alt="...">
-                  </div>
-                  
+            <div class="col-md-6 py-3" data-anime="right">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="Fotos/Foto1.png" class="d-block w-100" style="height: 390px; object-fit: cover;" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Fotos/foto2.png" class="d-block w-100" style="height: 390px; object-fit: cover;" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Fotos/foto3.png" class="d-block w-100" style="height: 390px; object-fit: cover;" alt="...">
+                        </div>
+                    </div>
                 </div>
-              </div>
-          </div>
-          <div class="col p-4 d-flex flex-column justify-content-center" data-anime="left">
-            <h5 class="cor-letra-laranja text-start titulo-carrosel">Você só encontra isso aqui!</h5>
-            <p class="cor-letra-branca text-start texto-carrosel">A Barbearia Barba Forte conta com serviço de barba, cabelo e bigode, uma experiência única para você! Aqui você tem o poder de sempre desfrutar de uma boa cerveja! Venha conhecer a experiência de ser mais um Brother!</p>
-          </div>
+            </div>
+            <div class="col-md-6 p-4 d-flex flex-column justify-content-center" data-anime="left">
+                <h5 class="text-start cor-letra-laranja">Você só encontra isso aqui!</h5>
+                <p class="text-start cor-letra-branca">A Barbearia Barba Forte conta com serviço de barba, cabelo e bigode, uma experiência única para você! Aqui você tem o poder de sempre desfrutar de uma boa cerveja! Venha conhecer a experiência de ser mais um Brother!</p>
+            </div>
         </div>
-      </div>
-      <section class="text-center my-5 bg-white">
-        <h2 class="fw-bold cor-letra-laranja mb-5">Tradição e qualidade</h2>
+    </div>
+    <section class="text-center my-5 bg-white p-3">
+        <h2 class="fw-bold cor-letra-laranja mb-5 mt-5">Tradição e qualidade</h2>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="service-box">
-                        <img src="Fotos/cabelo.png" alt="Corte de Cabelo" class="service-icon mb-3">
-                        <h5 class="fw-bold cor-letra-preta">Corte de Cabelo</h5>
+                        <img src="Fotos/cabelo.png" alt="Corte de Cabelo" class="mb-3" style="width: 80px; height: 80px;">
+                        <h5 class="fw-bold" style="color: #0c0c0c;">Corte de Cabelo</h5>
                         <p class="text-muted">Do clássico ao moderno, do social ao degradê, nossos profissionais são treinados para oferecer o melhor serviço com tesoura, máquina, secador e pente.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-box">
-                        <img src="Fotos/barba.png" alt="Design de Barba" class="service-icon mb-3" >
-                        <h5 class="fw-bold cor-letra-preta">Design de Barba</h5>
+                        <img src="Fotos/barba.png" alt="Design de Barba" class="mb-3" style="width: 80px; height: 80px;">
+                        <h5 class="fw-bold" style="color: #0c0c0c;">Design de Barba</h5>
                         <p class="text-muted">Barba terapia ou barba simples feita ao estilo tradicional com navalha, a pele é preparada com óleos essenciais, aplicação de toalhas quentes para abrir os poros e massagem facial.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-box">
-                        <img src="Fotos/sobrancelha.png" alt="Design de Sobrancelha" class="service-icon mb-3">
-                        <h5 class="fw-bold  cor-letra-preta">Design de Sobrancelha</h5>
+                        <img src="Fotos/sobrancelha.png" alt="Design de Sobrancelha" class="mb-3" style="width: 80px; height: 80px;">
+                        <h5 class="fw-bold" style="color: #0c0c0c;">Design de Sobrancelha</h5>
                         <p class="text-muted">Deixe sua sobrancelha no estilo.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="text-center my-5 ">
-      <h2 class="fw-bold cor-letra-laranja mb-5">Conheça nossa barbearia</h2>
-      <div class="container">
-          <div class="row">
-              <div class="col-md-4">
-                  <div class="service-box">
-                      <img src="Fotos/galeria1.png" alt="Corte de Cabelo" class="foto-icon mb-3">
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="service-box">
-                      <img src="Fotos/galeria2.png" alt="Design de Barba" class="foto-icon mb-3" >
-                                        </div>
-              </div>
-              <div class="col-md-4">
-                <div class="service-box">
-                    <img src="Fotos/galeria3.png" alt="Design de Barba" class="foto-icon mb-3" >
-                                      </div>
-            </div>
-            <div class="col-md-4">
-              <div class="service-box">
-                  <img src="Fotos/galeria4.png" alt="Design de Barba" class="foto-icon mb-3" >
-                                    </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-                <img src="Fotos/galeria5.png" alt="Design de Barba" class="foto-icon mb-3" >
-                                  </div>
-        </div>
-          <div class="col-md-4 position-relative">
-            <div class="service-box">
-              <img src="Fotos/galeria6.png" alt="Design de Barba" class="foto-icon mb-3">
-              <div class="blur-overlay d-flex justify-content-center align-items-center">
-                <a href="https://www.instagram.com/barber.barbaforte/" target="_blank" class="text-white text-decoration-none">Veja mais no Instagram</a>
-              </div>
-            </div>
-          </div>
-        
-          </div>
-      </div>
-  </section>
-
-
-      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="true" data-anime="left">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="localizacao">
-                <p class="text-center display-6 pt-3 text-wrap mobile">Barbearia Barba Forte - Campinas</p>
-                <div class="mapas-alignment">
-                  <p style="width: 300px; margin-right: 20px; font-weight: bold;" class="desktop"><span style="font-size: 1.8em;">Venha nos conhecer no endereço: <br>R. Papa São Marcos, 391, Campinas, Sao Paulo 13068-315</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.3947366874154!2d-47.154470024913294!3d-22.861872179286745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8b8be69759e1f%3A0x5e5583670f1b0142!2sR.%20Papa%20S%C3%A3o%20Marcos%2C%20391%20-%20Conj.%20Hab.%20Padre%20Anchieta%2C%20Campinas%20-%20SP%2C%2013068-315!5e0!3m2!1spt-BR!2sbr!4v1717282292033!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section class="text-center my-5">
+        <h2 class="fw-bold cor-letra-laranja mb-5">Conheça nossa barbearia</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 position-relative">
+                    <div class="service-box">
+                        <img src="Fotos/galeria1.png" alt="Corte de Cabelo" class="mb-3" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <div class="col-md-4 position-relative">
+                    <div class="service-box">
+                        <img src="Fotos/galeria2.png" alt="Design de Barba" class="mb-3" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <div class="col-md-4 position-relative">
+                    <div class="service-box">
+                        <img src="Fotos/galeria3.png" alt="Design de Barba" class="mb-3" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <div class="col-md-4 position-relative">
+                    <div class="service-box">
+                        <img src="Fotos/galeria4.png" alt="Design de Barba" class="mb-3" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <div class="col-md-4 position-relative">
+                    <div class="service-box">
+                        <img src="Fotos/galeria5.png" alt="Design de Barba" class="mb-3" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <div class="col-md-4 position-relative">
+                    <div class="service-box">
+                        <img src="Fotos/galeria6.png" alt="Design de Barba" class="mb-3" style="width: 100%; height: auto;">
+                        <div class="blur-overlay">
+                            <a href="https://www.instagram.com/barber.barbaforte/" target="_blank" class="text-white text-decoration-none">Veja mais no Instagram</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-          </div>
-         
-          </div>
         </div>
-      
-      </div>
-      <div class="container text-center mt-3 cor-letra-branca">
+    </section>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-anime="left">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="localizacao" style="background-color: #fffffffa; height: 430px; width: 100%; padding: 25px 0;">
+                    <p class="text-center display-6 pt-3 text-wrap mobile" style="display: none;">Barbearia Barba Forte - Campinas</p>
+                    <div class="mapas-alignment d-flex justify-content-center align-items-center">
+                        <p style=" max-width: 300px; margin-left: 20px; font-weight: bold; font-size: 20px;" class="desktop">
+                            Venha nos conhecer no endereço: <br>
+                            R. Papa São Marcos, 391, Campinas, Sao Paulo 13068-315
+                        </p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.3947366874154!2d-47.154470024913294!3d-22.861872179286745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8b8be69759e1f%3A0x5e5583670f1b0142!2sR.%20Papa%20S%C3%A3o%20Marcos%2C%20391%20-%20Conj.%20Hab.%20Padre%20Anchieta%2C%20Campinas%20-%20SP%2C%2013068-315!5e0!3m2!1spt-BR!2sbr!4v1717282292033!5m2!1spt-BR!2sbr" width="80%" height="300" style="border:5;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center mt-3 cor-letra-branca">
         <div class="row">
-          <div class="col" data-anime="right" style="margin-top: 30px;">
-            <h3>Que tal já deixar marcado seu corte?</h3>
-            <button type="button" class="btn btn-lg transparencia-botao mt-4"><a href="https://api.whatsapp.com/send?phone=5519998341189&text=Ol%C3%A1%2C%20eu%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" style="color: white; text-decoration: none;">Reservar um horário</a></button>
-          </div>
-          <div  data-anime="left"  style=" width: 430px; margin-top: 20px;">
-            <h3>Horário de funcionamento</h3>
-            <ul style=" text-align: left;">
-              <li>Segunda - Fechado . </li>
-              <li>Terça - 8h as 19h.</li>
-              <li>Quarta - 8h as 19h.</li>
-              <li>Quinta - 8h as 19h.</li>
-              <li>Sexta - 8h as 19h.</li>
-              <li>Sábado - 8h as 19h.</li>
-              <li>Domingo - 8h as 12h.</li>
-            </ul>
-          </div>
+            <div class="col-md-6" data-anime="right" style="margin-top: 30px;">
+                <h3>Que tal já deixar marcado seu corte?</h3>
+                <button type="button" class="btn btn-lg mt-4 transparencia-botao">
+                    <a href="https://api.whatsapp.com/send?phone=5519998341189&text=Ol%C3%A1%2C%20eu%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" style="color: white; text-decoration: none;">Reservar um horário</a>
+                </button>
+            </div>
+            <div class="col-md-6" data-anime="left" style="margin-top: 20px;">
+                <h3>Horário de funcionamento</h3>
+                <ul class="text-start">
+                    <li>Segunda - Fechado</li>
+                    <li>Terça - 8h às 19h</li>
+                    <li>Quarta - 8h às 19h</li>
+                    <li>Quinta - 8h às 19h</li>
+                    <li>Sexta - 8h às 19h</li>
+                    <li>Sábado - 8h às 19h</li>
+                    <li>Domingo - 8h às 12h</li>
+                </ul>
+            </div>
         </div>
-        <div>
-          <a href="https://www.instagram.com/barber.barbaforte/" target="_blank"><img src="https://lh3.googleusercontent.com/Fx8_a1hkID05K2_dVrn9s_nORCtNw4dit17WHTs-eO4OUSm3ufrcrLy1VyYp7Hpudvk0o25bS2EWTw7FxA=s100" alt="" class="imagem-socialmedia"></a>
-          <a href="https://www.facebook.com/barber.barbaforte/" target="_blank"><img src="https://lh3.googleusercontent.com/K2EjFJYPNKryCYWA8RIl8C9UJCjXhqc9XKoxvfEdWzLy0m0-MvUyIstja9MpWwv6TTu1Yn9gDBtfSIkX4Ic=s100" alt="" class="imagem-socialmedia"></a>
-          <a href="https://api.whatsapp.com/send?phone=5519998341189&text=Ol%C3%A1%2C%20eu%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank"><img src="https://lh3.googleusercontent.com/mJbi4TSrnezuy9tV1SwP3ktjTgoXKAK_USkm0mgBcEL43vbVDjYBwZglyS1tG3tJyhG16Lz5Cf1k4y2RUhF55QaSwmk=s100"" alt="" class="imagem-socialmedia"></a>
+        <div class="mt-4">
+            <a href="https://www.instagram.com/barber.barbaforte/" target="_blank"><img src="https://lh3.googleusercontent.com/Fx8_a1hkID05K2_dVrn9s_nORCtNw4dit17WHTs-eO4OUSm3ufrcrLy1VyYp7Hpudvk0o25bS2EWTw7FxA=s100" alt="" class="img-fluid" style="height: 30px; margin: 20px 10px;"></a>
+            <a href="https://www.facebook.com/barber.barbaforte/" target="_blank"><img src="https://lh3.googleusercontent.com/K2EjFJYPNKryCYWA8RIl8C9UJCjXhqc9XKoxvfEdWzLy0m0-MvUyIstja9MpWwv6TTu1Yn9gDBtfSIkX4Ic=s100" alt="" class="img-fluid" style="height: 30px; margin: 20px 10px;"></a>
+            <a href="https://api.whatsapp.com/send?phone=5519998341189&text=Ol%C3%A1%2C%20eu%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank"><img src="https://lh3.googleusercontent.com/mJbi4TSrnezuy9tV1SwP3ktjTgoXKAK_USkm0mgBcEL43vbVDjYBwZglyS1tG3tJyhG16Lz5Cf1k4y2RUhF55QaSwmk=s100" alt="" class="img-fluid" style="height: 30px; margin: 20px 10px;"></a>
         </div>
-      </div>
-      <footer>
+    </div>
+    <footer>
         <p style="text-align: center;">© 2024 Barbearia BarbaForte. Todos os direitos reservados</p>
-      </footer>
+    </footer>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
